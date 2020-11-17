@@ -1,0 +1,23 @@
+<span [ngSwitch]="alerta">
+    <p *ngSwitchCase="'success'">success</p>
+    <p *ngSwitchCase="'info'">info</p>
+    <p *ngSwitchCase="'warning'">warning</p>
+    <p *ngSwitchDefault>danger</p>
+</span>
+
+<button type="button" (click)="alerta='success'" class="btn btn-default"> Cambiar </button>
+
+<div [ngSwitch]="alerta" >
+    <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+      A simple success alert—check it out!
+    </div>
+    <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+      A simple warning alert—check it out!
+    </div>
+    <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+        A simple info alert—check it out!
+    </div>
+    <div *ngSwitchDefault class="alert alert-danger" role="alert">
+      A simple danger alert—check it out!
+    </div>
+</div>
